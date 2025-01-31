@@ -4,20 +4,6 @@ This repository contains an **image classification model** leveraging the **VGG1
 
 ---
 
-## **Table of Contents**
-- [Introduction](#introduction)
-- [Features](#features)
-- [Dataset & Preprocessing](#dataset--preprocessing)
-- [Model Architecture](#model-architecture)
-- [Training Process](#training-process)
-- [Evaluation & Prediction](#evaluation--prediction)
-- [Heatmap Visualization](#heatmap-visualization)
-- [Installation & Usage](#installation--usage)
-- [Results](#results)
-- [Acknowledgments](#acknowledgments)
-
----
-
 ## **Introduction**
 This project focuses on **image classification** using a **VGG16-based Convolutional Neural Network (ConvNet)** integrated with an **attention mechanism** to improve feature extraction. The model is trained on a labeled dataset and employs **heatmap visualization** for better interpretability.
 
@@ -36,3 +22,15 @@ This project focuses on **image classification** using a **VGG16-based Convoluti
 ### **Dataset**
 The model is trained on a labeled image dataset. The dataset should be organized as follows:
 
+### **Preprocessing Steps**
+- **Resizing** images to match **VGG16 input size (224x224)**
+- **Normalization**: Pixel values scaled between 0 and 1  
+- **Data Augmentation**: Applied techniques such as **rotation, flipping, zooming, and shifting** to improve model generalization  
+
+---
+
+## **Model Architecture**
+- **Base Model**: Pretrained **VGG16**
+- **Attention Mechanism**: Applied on convolutional feature maps to emphasize important regions
+- **Fully Connected Layers**: Dense layers with dropout to prevent overfitting
+- **Output Layer**: Softmax activation for multi-class classification
